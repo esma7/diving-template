@@ -10,9 +10,7 @@
     list-style-type: none;
     font-family: "Lato";
 
-
 }
-
 
 header {
     position: absolute;
@@ -101,10 +99,17 @@ header {
 
 
         nav {
+            // position: sticky;
+            // top:0px;
             width: 100%;
-            padding: 20px;
+            padding: 10px;
             border-top: 1px solid grey;
             border-bottom: 1px solid grey;
+            z-index: 999999;
+            transition: 1s;
+
+
+
 
             ul {
                 display: flex;
@@ -112,8 +117,13 @@ header {
                 font-family: "Lato";
                 font-weight: bold;
 
+
                 .active {
-                    color: yellow;
+                    color: yellow !important;
+                }
+
+                .padding {
+                    padding: 20px 0;
                 }
 
                 li {
@@ -121,6 +131,7 @@ header {
                     display: flex;
                     flex-direction: column;
                     position: relative;
+
 
                     a {
                         color: #fff;
@@ -139,7 +150,7 @@ header {
                         visibility: hidden;
                         opacity: 0;
                         transition: 0.7s all ease;
-                        transform: translateY(40px) scale(0.7);
+                        transform: translateY(30px) scale(0.7);
 
                         li {
                             margin-top: 15px;
@@ -156,32 +167,32 @@ header {
                     }
 
                     .element_child {
-                        width: 700px;
+                        width: 675px;
                         min-height: 350px;
                         position: absolute;
                         display: flex;
+                        justify-content: space-between;
                         margin-top: 0px;
-                        margin-left: -58px;
-                        padding: 20px;
+                        margin-left: -30px;
+                        padding: 30px;
                         background-color: #fff;
                         visibility: hidden;
                         opacity: 0;
                         transition: 0.7s all ease;
-                        transform: translateY(40px) scale(.7);
+                        transform: translateY(30px) scale(.7);
 
                         .elements,
                         .additional {
                             margin-top: 30px;
-                            width: 50%;                         
+
 
                             span {
                                 color: #0473DB;
                                 display: inline-block;
-                                width: 60%;
                                 border-bottom: 1px solid grey;
                                 font-family: "Poppins";
                                 font-weight: 400;
-                                padding-bottom:7px;
+                                padding-bottom: 7px;
 
                             }
 
@@ -189,10 +200,13 @@ header {
                                 fill: #0473DB;
                                 display: flex;
                                 align-items: center;
-                                 pre{
+                                width: 240px;
+                                margin-bottom: 10px;
+
+                                pre {
                                     margin-left: 5px;
-                                 }
-                                
+                                }
+
                             }
 
                             .element_ul1 {
@@ -210,8 +224,8 @@ header {
                                     a {
                                         color: #000;
 
-                                        &:hover{
-                                            color:blue;
+                                        &:hover {
+                                            color: #0473DB;
                                         }
                                     }
                                 }
@@ -231,8 +245,9 @@ header {
 
                                     a {
                                         color: #000;
-                                        &:hover{
-                                            color:blue;
+
+                                        &:hover {
+                                            color: #0473DB;
                                         }
                                     }
                                 }
@@ -244,6 +259,7 @@ header {
 
                 .element_parent {
                     position: relative;
+                    padding: 20px 0;
 
                     &:hover .element_child {
                         visibility: visible;
@@ -254,6 +270,7 @@ header {
 
                 .page_parent {
                     position: relative;
+                    padding: 20px 0;
 
                     &:hover .page_child {
                         visibility: visible;
@@ -272,6 +289,7 @@ header {
 
 #firstSection {
     position: relative;
+    overflow: hidden;
 
 
 
@@ -337,18 +355,26 @@ header {
 
     }
 
-    .slider {
+    #slider {
         display: flex;
+        position: relative;
+        left: 0;
+        transition: .5s all ease;
+
 
 
         .slide {
             width: 100%;
             position: relative;
 
+
+
             img {
-                // width: 100%;                
-                height: 900px;
+                width: 1520px;
+                height: 700px;
             }
+
+
 
             .info {
                 position: absolute;
@@ -356,6 +382,10 @@ header {
                 left: 10%;
                 color: #fff;
                 padding: 30px;
+                transform: translateX(0px);
+                transition: 3s all ease;
+                opacity: 0.7;
+
 
 
                 h1 {
@@ -413,4 +443,170 @@ header {
 
         }
     }
+}
+
+#secondSection {
+    width: 100%;
+    height: 500px;
+    background-image: url("../../../assets/img/bg-index-1.jpg");
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 60px;
+        font-family: "Lato";
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+
+
+        .equipment {
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .item_equip {
+                border-bottom: 1px solid rgb(159, 156, 156);
+            }
+
+            .item_equip,
+            .item_equip1 {
+                display: flex;
+                margin-bottom: 50px;
+                font-family: "Lato";
+                height: 180px;
+
+                .img_equip {
+                    padding: 10px;
+                }
+
+                .info_equip {
+                    padding: 10px;
+
+                    h2 {
+                        font-family: "Lato";
+                        font-weight: 400;
+                        text-align: center;
+                        font-size: 30px;
+                        color: #212020;
+                    }
+
+                    p {
+                        color: #7d7979;
+                        text-align: center;
+                        padding: 10px;
+                        font-size: 17px;
+                    }
+                }
+
+            }
+
+            #movementright {
+                transform: translateX(-60px);
+                transition: 3s all ease;
+            }
+
+
+            #movementleft {
+                transform: translateX(40px);
+                transition: 3s all ease;
+            }
+
+        }
+
+
+    }
+
+}
+
+#thirdsection {
+    background-image: url("../../../assets/img/parallax-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 40px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:40px;
+        
+
+        .counterModern {
+            position: relative;
+            width: 270px;
+            height: 164px;
+            color: #fff;
+            text-align: center;          
+           
+            h2 {  
+                font-family: "Comfortaa";           
+                font-size: 60px;                
+               
+            }
+
+            .counterBefore{
+                position: relative;
+                width: 270px;
+                height: 10%;               
+                display: flex;
+                justify-content: center;
+            }
+
+            .counterBefore::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 40px;
+                height: 2px;                                                       
+                background-color: #fff;
+               
+            }
+
+            h6 {
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 20px;
+                padding:8px;                
+                
+            }
+        }
+    }
+}
+
+
+.headerAnime {
+
+    animation: anime 1s forwards;
+
+}
+
+@keyframes anime {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+
+        transform: translateY(0);
+        background-color: #fff;
+        color: black;
+    }
+}
+
+#preloader {
+    background: #fff url("../../../assets/img/loaderfinal.gif") no-repeat center center;
+    background-size: 8%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
 }

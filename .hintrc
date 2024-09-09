@@ -3,6 +3,8 @@
     "development"
   ],
   "hints": {
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "detect-css-reflows/paint": "off",
+    "detect-css-reflows/composite": "off"
   }
 }
