@@ -120,6 +120,47 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 
 
+const divingImg = document.querySelector(".image")
+const diver1 = document.getElementById("diver1")
+const diver2 = document.getElementById("diver2")
+const diver3 = document.getElementById("diver3")
+
+
+function removeActiveClass() {
+    diver1.classList.remove("selected");
+    diver2.classList.remove("selected");
+    diver3.classList.remove("selected");
+}
+
+function firstImg() {
+    divingImg.src = "./assets/img/product-big-1-543x558.png"
+    removeActiveClass();
+    diver1.classList.add("selected")
+}
+function secondImg() {
+    divingImg.src = "./assets/img/product-big-2-543x558.png"
+
+    removeActiveClass();
+    diver2.classList.add("selected")
+}
+function thirdImg() {
+    divingImg.src = "./assets/img/product-big-3-543x558.png"
+
+    removeActiveClass();
+    diver3.classList.add("selected")
+}
+
+
+const accordBtn = document.querySelectorAll(".accordion-button");
+const accordContent = document.querySelectorAll(".accordion-content");
+
+accordBtn.forEach((item, index)=>{
+    item.addEventListener("click", () => {
+        accordContent[index].classList.toggle("accordion_active")
+    })
+})
+
+
 
 
 
