@@ -154,11 +154,15 @@ function thirdImg() {
 const accordBtn = document.querySelectorAll(".accordion-button");
 const accordContent = document.querySelectorAll(".accordion-content");
 
-accordBtn.forEach((item, index)=>{
-    item.addEventListener("click", () => {
-        accordContent[index].classList.toggle("accordion_active")
-    })
-})
+accordBtn.forEach((button, index) => {
+    button.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default behavior
+        accordContent[index].classList.toggle("accordion_active");
+    });
+});
+
+
+
 
 
 

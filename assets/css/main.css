@@ -511,7 +511,6 @@ header .container nav ul .page_parent:hover .page_child {
 #fourthsection .container .divers .diver_accordion {
   width: 50%;
   padding: 10px;
-  background-color: #FAEA49;
 }
 #fourthsection .container .divers .diver_accordion h3 {
   width: 100%;
@@ -537,6 +536,7 @@ header .container nav ul .page_parent:hover .page_child {
   font-size: 18px;
   font-family: "Comfortaa";
   font-weight: bold;
+  color: #0473DB;
 }
 #fourthsection .container .divers .diver_accordion .accordion-item .accordion-button a .icons {
   width: 40px;
@@ -544,22 +544,22 @@ header .container nav ul .page_parent:hover .page_child {
   margin: 0 10px;
   padding: 13px;
   border-radius: 50%;
-  color: blue;
+  color: #0473DB;
   background-color: #fff;
   box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
   transition: 0.5s all ease-in-out;
 }
 #fourthsection .container .divers .diver_accordion .accordion-item .accordion-content {
-  width: 100%;
-  padding: 10px 0;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 #fourthsection .container .divers .diver_accordion .accordion-item .accordion-content p {
   color: #7d7979;
   font-size: 17px;
 }
 #fourthsection .container .divers .diver_accordion .accordion-item .accordion_active {
-  display: block;
+  max-height: 100px;
 }
 #fourthsection .container .diversLocation {
   width: 100%;
@@ -594,6 +594,53 @@ header .container nav ul .page_parent:hover .page_child {
 }
 #fourthsection .container .diversLocation .unit .unit-body p {
   color: #7d7979;
+}
+
+#gallery .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#gallery .container h3 {
+  font-size: 44px;
+  font-family: "Comfortaa";
+  text-align: center;
+  padding: 30px;
+}
+#gallery .container .isotope {
+  position: relative;
+}
+#gallery .container .isotope .isotope-item:hover .overlay {
+  visibility: visible;
+  opacity: 0.9;
+  transform: scale(1);
+}
+#gallery .container .isotope .isotope-item .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 22;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.5s all ease;
+  font-family: "Comfortaa";
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#gallery .container .isotope .isotope-item .overlay .searchImg {
+  width: 40px;
+  min-height: 40px;
+  padding: 10px;
+  background-color: #0473DB;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 10px;
 }
 
 .headerAnime {
