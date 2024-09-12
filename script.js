@@ -163,7 +163,115 @@ accordBtn.forEach((button, index) => {
 
 
 
+const overlays = document.querySelectorAll(".overlay");
 
+overlays.forEach(overlay => {
+    overlay.addEventListener("mouseover", () => {
+        overlay.querySelector(".moveText").classList.add("animate");
+        overlay.querySelector(".searchImg").classList.add("animate2");
+    });
+
+    overlay.addEventListener("mouseout", () => {
+        overlay.querySelector(".moveText").classList.remove("animate");
+        overlay.querySelector(".searchImg").classList.remove("animate2");
+
+    });
+});
+
+
+// const isotopeItem = document.querySelectorAll(".isotope-item");
+
+// const lightboxContainer = document.createElement("div");
+// const lightBoxContent = document.createElement("div");
+// const lightBoxImg = document.createElement("img"); // Changed to img element
+// const lightBoxprev = document.createElement("div");
+// const lightBoxnext = document.createElement("div");
+
+// lightboxContainer.classList.add('lightbox');
+// lightBoxContent.classList.add('lightbox-content');
+// lightBoxprev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+// lightBoxnext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+// lightboxContainer.appendChild(lightBoxContent);
+// lightBoxContent.appendChild(lightBoxImg); // Append img element
+// lightBoxContent.appendChild(lightBoxprev);
+// lightBoxContent.appendChild(lightBoxnext);
+// document.body.appendChild(lightboxContainer);
+
+// let index = 1;
+
+// function showLightBox(n) {
+//     if (n > isotopeItem.length) {
+//         index = 1;
+//     } else if (n < 1) {
+//         index = isotopeItem.length;
+//     }
+//     let imageLocation = isotopeItem[index - 1].querySelector("img").getAttribute("src");
+//     lightBoxImg.setAttribute("src", imageLocation);
+// }
+
+// function currentImage(e) {
+//     e.preventDefault();
+//     lightboxContainer.style.display = "block";
+//     let imageIndex = parseInt(this.getAttribute("data-index"));
+//     showLightBox(index = imageIndex);
+// }
+
+// const searchImg = document.querySelectorAll(".searchImg"); // Corrected selector
+
+// for (let i = 0; i < searchImg.length; i++) {
+//     searchImg[i].addEventListener("click", currentImage);
+// }
+
+// function sliderImage(n) {
+//     showLightBox(index += n);
+// }
+
+// function prevImage() {
+//     sliderImage(-1);
+// }
+
+// function nextImage() {
+//     sliderImage(1);
+// }
+
+// lightBoxnext.addEventListener("click", nextImage);
+// lightBoxprev.addEventListener("click", prevImage);
+
+// function closeLightBox(event) {
+//     if (event.target === lightboxContainer) {
+//         lightboxContainer.style.display = "none";
+//     }
+// }
+
+// lightboxContainer.addEventListener("click", closeLightBox);
+
+
+
+// Get the modal
+var modal = document.getElementById("imageModal");
+
+// Get the image and insert it inside the modal
+var modalImg = document.getElementById("modalImage");
+var captionText = document.getElementById("caption");
+
+document.querySelectorAll('.searchImg').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+        var img = this.closest('.isotope-item').querySelector('img');
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+    });
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
 
 

@@ -359,39 +359,55 @@
         <section id="gallery">
             <div class="container">
                 <h3>Gallery</h3>
-                <div class="isotope-wrap">                    
+                <div class="isotope-wrap">
                     <div class="isotope">
-                        <div class="isotope-item" style="position: absolute; left: 0px; top: 0px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a> Barracuda Point</div>
+                        <div class="isotope-item" data-index="1" style="position: absolute; left: 0px; top: 0px;">
+                            <div class="overlay"><span class="moveText">Barracuda Point</span><a class="searchImg"
+                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-1-270x250.jpg" alt="">
                         </div>
-                        <div class="isotope-item" style="position: absolute; left: 300px; top: 0px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>Blue Corner Wall</div>
+                        <div class="isotope-item" data-index="2" style="position: absolute; left: 300px; top: 0px;">
+                            <div class="overlay"><span class="moveText">Blue Corner Wall</span><a class="searchImg"
+                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-2-270x530.jpg" alt="">
                         </div>
-                        <div class="isotope-item" style="position: absolute; left: 600px; top: 0px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a> Barracuda Point</div>
+                        <div class="isotope-item" data-index="3" style="position: absolute; left: 600px; top: 0px;">
+                            <div class="overlay"><span class="moveText">The Yongola</span><a class="searchImg"
+                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-3-270x250.jpg" alt="">
                         </div>
-                        <div class="isotope-item" style="position: absolute; left: 900px; top: 0px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a> Barracuda Point</div>
+                        <div class="isotope-item" data-index="4" style="position: absolute; left: 900px; top: 0px;">
+                            <div class="overlay"><span class="moveText">Thistlegon</span><a class="searchImg"
+                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-4-270x250.jpg" alt="">
                         </div>
-                        <div class="isotope-item" style="position: absolute; left: 0px; top: 280px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a> Barracuda Point</div>
+                        <div class="isotope-item" data-index="5" style="position: absolute; left: 0px; top: 280px;">
+                            <div class="overlay"><span class="moveText">Shark and Yolanda Reef</span><a
+                                    class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-5-270x250.jpg" alt="">
                         </div>
-                        <div class="isotope-item" style="position: absolute; left: 600px; top: 280px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a> Barracuda Point</div>
+                        <div class="isotope-item" data-index="6" style="position: absolute; left: 600px; top: 280px;">
+                            <div class="overlay"><span class="moveText">Great Blue Holef</span><a class="searchImg"
+                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-6-570x530.jpg" alt="">
                         </div>
-                        <div class="isotope-item" style="position: absolute; left: 0px; top: 560px;">
-                            <div class="overlay"><a class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a> Barracuda Point</div>
+                        <div class="isotope-item" data-index="7" style="position: absolute; left: 0px; top: 560px;">
+                            <div class="overlay"><span class="moveText">Manta Ray Night Dive</span><a class="searchImg"
+                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                             <img src="./assets/img/masonry-gallery-7-570x250.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal  -->
+            <!-- Modal Structure -->
+            <div id="imageModal" class="modal">
+                <span class="close">×</span>
+                <img  class="modal-content" id="modalImage">
+                <div id="caption"></div>
+            </div>
+
         </section>
 
     </main>
