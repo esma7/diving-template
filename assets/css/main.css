@@ -10,6 +10,10 @@
   font-family: "Lato";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -596,6 +600,92 @@ header .container nav ul .page_parent:hover .page_child {
   color: #7d7979;
 }
 
+#testimonial {
+  background-color: #EFF3F8;
+  overflow: hidden;
+}
+#testimonial .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+#testimonial .container h3 {
+  font-size: 44px;
+  font-family: "Comfortaa";
+  text-align: center;
+}
+#testimonial .container .client-body {
+  display: flex;
+  width: 800px;
+  height: 90px;
+}
+#testimonial .container .client-body .client-content {
+  width: 100%;
+  margin: 15px;
+  font-size: 18px;
+  padding: 10px;
+  font-family: "Poppins";
+  text-align: center;
+}
+#testimonial .container .client-body .appear {
+  display: none;
+}
+#testimonial .container .client-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin: 20px 10px;
+}
+#testimonial .container .client-button #client-figure1,
+#testimonial .container .client-button #client-figure2,
+#testimonial .container .client-button #client-figure3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#testimonial .container .client-button #client-figure1 .image,
+#testimonial .container .client-button #client-figure2 .image,
+#testimonial .container .client-button #client-figure3 .image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+#testimonial .container .client-button #client-figure1 .image img,
+#testimonial .container .client-button #client-figure2 .image img,
+#testimonial .container .client-button #client-figure3 .image img {
+  border-radius: 50%;
+}
+#testimonial .container .client-button #client-figure1 h4,
+#testimonial .container .client-button #client-figure2 h4,
+#testimonial .container .client-button #client-figure3 h4 {
+  color: #0473DB;
+}
+#testimonial .container .client-button #client-figure1 .overlayClient1,
+#testimonial .container .client-button #client-figure1 .overlayClient2,
+#testimonial .container .client-button #client-figure1 .overlayClient3,
+#testimonial .container .client-button #client-figure2 .overlayClient1,
+#testimonial .container .client-button #client-figure2 .overlayClient2,
+#testimonial .container .client-button #client-figure2 .overlayClient3,
+#testimonial .container .client-button #client-figure3 .overlayClient1,
+#testimonial .container .client-button #client-figure3 .overlayClient2,
+#testimonial .container .client-button #client-figure3 .overlayClient3 {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  opacity: 0.4;
+  position: absolute;
+  border-radius: 50%;
+}
+
 #gallery .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -606,21 +696,42 @@ header .container nav ul .page_parent:hover .page_child {
   text-align: center;
   padding: 30px;
 }
-#gallery .container .isotope {
+#gallery .container .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: 250px 250px 250px;
+  grid-gap: 30px;
+}
+#gallery .container .gallery-container .gallery-item:nth-child(1), #gallery .container .gallery-container .gallery-item:nth-child(3), #gallery .container .gallery-container .gallery-item:nth-child(4), #gallery .container .gallery-container .gallery-item:nth-child(5) {
+  grid-column: span 1;
+}
+#gallery .container .gallery-container .gallery-item:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+#gallery .container .gallery-container .gallery-item:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+#gallery .container .gallery-container .gallery-item:nth-child(7) {
+  grid-column: span 2;
+}
+#gallery .container .gallery-container .gallery-item {
   position: relative;
 }
-#gallery .container .isotope .modal {
-  position: absolute;
-}
-#gallery .container .isotope .isotope-item:hover .overlay {
+#gallery .container .gallery-container .gallery-item:hover .overlay {
   visibility: visible;
   opacity: 0.9;
   transform: scale(1);
 }
-#gallery .container .isotope .isotope-item .overlay {
+#gallery .container .gallery-container .gallery-item .moveText {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+#gallery .container .gallery-container .gallery-item .overlay {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  box-sizing: border-box;
   background-color: #fff;
   position: absolute;
   left: 0;
@@ -638,7 +749,7 @@ header .container nav ul .page_parent:hover .page_child {
   justify-content: center;
   cursor: pointer;
 }
-#gallery .container .isotope .isotope-item .overlay .searchImg {
+#gallery .container .gallery-container .gallery-item .overlay .searchImg {
   width: 40px;
   min-height: 40px;
   padding: 10px;
@@ -647,7 +758,7 @@ header .container nav ul .page_parent:hover .page_child {
   color: #fff;
   margin-right: 10px;
 }
-#gallery .container .isotope .isotope-item .overlay .animate2 {
+#gallery .container .gallery-container .gallery-item .overlay .animate2 {
   animation: anima2 1s;
 }
 @keyframes anima2 {
@@ -658,15 +769,15 @@ header .container nav ul .page_parent:hover .page_child {
     transform: translateX(0px);
   }
 }
-#gallery .container .isotope .isotope-item .overlay span {
+#gallery .container .gallery-container .gallery-item .overlay span {
   font-family: "Comfortaa";
   font-size: 24px;
   padding: 10px;
 }
-#gallery .container .isotope .isotope-item .overlay span:hover {
+#gallery .container .gallery-container .gallery-item .overlay span:hover {
   color: #0473DB;
 }
-#gallery .container .isotope .isotope-item .overlay .animate {
+#gallery .container .gallery-container .gallery-item .overlay .animate {
   animation: movetext 1s;
 }
 @keyframes movetext {
@@ -676,6 +787,146 @@ header .container nav ul .page_parent:hover .page_child {
   100% {
     transform: translateY(0px);
   }
+}
+
+#footer {
+  background-color: #2A333F;
+  margin-top: 20px;
+}
+#footer .container {
+  max-width: 1200px;
+  min-height: 270px;
+  margin: 0 auto;
+  padding: 50px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .container .galleryFooter, #footer .container .quick-links, #footer .container .getInTouch {
+  font-family: "Comfortaa";
+}
+#footer .container .galleryFooter h5, #footer .container .quick-links h5, #footer .container .getInTouch h5 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#footer .container .galleryFooter .footerImg, #footer .container .quick-links .footerImg, #footer .container .getInTouch .footerImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+#footer .container .galleryFooter .footerImg a, #footer .container .quick-links .footerImg a, #footer .container .getInTouch .footerImg a {
+  width: 96px;
+  height: 96px;
+  position: relative;
+  overflow: hidden;
+}
+#footer .container .galleryFooter .footerImg a img, #footer .container .quick-links .footerImg a img, #footer .container .getInTouch .footerImg a img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#footer .container .galleryFooter .footerImg a:hover:before, #footer .container .quick-links .footerImg a:hover:before, #footer .container .getInTouch .footerImg a:hover:before {
+  transform: scale(2) rotate(45deg) translate3d(0, -100%, 0);
+}
+#footer .container .galleryFooter .footerImg a::before, #footer .container .quick-links .footerImg a::before, #footer .container .getInTouch .footerImg a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0.4;
+  transition: 0.6s all ease;
+}
+#footer .container .quick-links ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#footer .container .quick-links ul li {
+  font-family: "Lato";
+  font-size: 17px;
+  padding: 0 17px 0 30px;
+  margin: 10px 0;
+  position: relative;
+}
+#footer .container .quick-links ul li::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: grey;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: 0.5s all ease;
+}
+#footer .container .quick-links ul li:hover:before {
+  width: 30px;
+}
+#footer .container .quick-links ul li a {
+  color: #fff;
+}
+#footer .container .quick-links ul li a:hover {
+  color: #0473DB;
+}
+#footer .container .getInTouch ul li {
+  font-family: "Lato";
+  font-size: 17px;
+  margin: 15px 0;
+}
+#footer .container .getInTouch ul li a {
+  color: #fff;
+}
+#footer .container .getInTouch ul li a:hover {
+  color: #0473DB;
+}
+#footer .container .getInTouch ul li a .yellow {
+  margin-right: 10px;
+  color: #FAEA49;
+  width: 30px;
+}
+#footer .container .getInTouch ul li a .footIcon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px;
+  transition: 0.5s all ease;
+}
+#footer .container .getInTouch ul li a .footIcon:hover {
+  border: 1px solid #0473DB;
+}
+#footer .subscribe {
+  border-top: 1px solid grey;
+}
+#footer .subscribe p {
+  font-family: "Poppins";
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+}
+
+#fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #0473DB;
+  border-radius: 50%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+#fixed a {
+  color: #fff;
 }
 
 .modal {

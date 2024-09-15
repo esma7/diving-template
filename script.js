@@ -179,76 +179,9 @@ overlays.forEach(overlay => {
 });
 
 
-// const isotopeItem = document.querySelectorAll(".isotope-item");
-
-// const lightboxContainer = document.createElement("div");
-// const lightBoxContent = document.createElement("div");
-// const lightBoxImg = document.createElement("img"); // Changed to img element
-// const lightBoxprev = document.createElement("div");
-// const lightBoxnext = document.createElement("div");
-
-// lightboxContainer.classList.add('lightbox');
-// lightBoxContent.classList.add('lightbox-content');
-// lightBoxprev.classList.add("fa", "fa-angle-left", "lightbox-prev");
-// lightBoxnext.classList.add("fa", "fa-angle-right", "lightbox-next");
-
-// lightboxContainer.appendChild(lightBoxContent);
-// lightBoxContent.appendChild(lightBoxImg); // Append img element
-// lightBoxContent.appendChild(lightBoxprev);
-// lightBoxContent.appendChild(lightBoxnext);
-// document.body.appendChild(lightboxContainer);
-
-// let index = 1;
-
-// function showLightBox(n) {
-//     if (n > isotopeItem.length) {
-//         index = 1;
-//     } else if (n < 1) {
-//         index = isotopeItem.length;
-//     }
-//     let imageLocation = isotopeItem[index - 1].querySelector("img").getAttribute("src");
-//     lightBoxImg.setAttribute("src", imageLocation);
-// }
-
-// function currentImage(e) {
-//     e.preventDefault();
-//     lightboxContainer.style.display = "block";
-//     let imageIndex = parseInt(this.getAttribute("data-index"));
-//     showLightBox(index = imageIndex);
-// }
-
-// const searchImg = document.querySelectorAll(".searchImg"); // Corrected selector
-
-// for (let i = 0; i < searchImg.length; i++) {
-//     searchImg[i].addEventListener("click", currentImage);
-// }
-
-// function sliderImage(n) {
-//     showLightBox(index += n);
-// }
-
-// function prevImage() {
-//     sliderImage(-1);
-// }
-
-// function nextImage() {
-//     sliderImage(1);
-// }
-
-// lightBoxnext.addEventListener("click", nextImage);
-// lightBoxprev.addEventListener("click", prevImage);
-
-// function closeLightBox(event) {
-//     if (event.target === lightboxContainer) {
-//         lightboxContainer.style.display = "none";
-//     }
-// }
-
-// lightboxContainer.addEventListener("click", closeLightBox);
 
 
 
-// Get the modal
 var modal = document.getElementById("imageModal");
 
 // Get the image and insert it inside the modal
@@ -274,12 +207,36 @@ span.onclick = function() {
 }
 
 
+const clientContent = document.querySelector(".client-body .client-content");
+const overlayClient1 = document.querySelector(".overlayClient1")
+const overlayClient2 = document.querySelector(".overlayClient2")
+const overlayClient3 = document.querySelector(".overlayClient3")
+
+const clientButton1 = document.getElementById("client-figure1");
+const clientButton2 = document.getElementById("client-figure2");
+const clientButton3 = document.getElementById("client-figure3");
 
 
 
 
+function firstContent() {
+    clientContent.innerHTML = `I had a fantastic weekend at Stoney Cove with your team. Great people who made my wife (Lisa) and I feel very welcome. Thanks for all your help and support with the diving!`;
 
+    overlayClient1.style.opacity = "0";
 
+}
+
+function secondContent() {
+    clientContent.innerHTML = `What a fantastic weekend spent with the amazingly friendly team at Divers! You made us feel very welcome and you all were amazing. Thank you!`;
+    overlayClient2.style.opacity = "0";
+
+}
+
+function thirdContent() {
+    clientContent.innerHTML = `It was a great first time dive, the team was very friendly and attentive I will have no hesitation going again and recommending you to all my friends and colleagues.`;
+    overlayClient3.style.opacity = "0";
+
+}
 
 
 

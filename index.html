@@ -14,8 +14,9 @@
 <body>
 
     <div id="preloader"></div>
+    <div id="fixed"><a href="#header"><i class="fa-solid fa-arrow-up"></i></a></div>
 
-    <header>
+    <header id="header">
         <div class="container">
             <div class="sayt_info">
                 <ul class="contact">
@@ -253,22 +254,22 @@
                 <div class="counterModern">
                     <h2 class="num" data-val="245">000</h2>
                     <div class="counterBefore"></div>
-                    <h6>Monthly <br> clients</h6>
+                    <h4>Monthly <br> clients</h4>
                 </div>
                 <div class="counterModern">
                     <h2 class="num" data-val="182">000</h2>
                     <div class="counterBefore"></div>
-                    <h6>Special <br> offers</h6>
+                    <h4>Special <br> offers</h4>
                 </div>
                 <div class="counterModern">
                     <h2 class="num" data-val="1267">000</h2>
                     <div class="counterBefore"></div>
-                    <h6>Positive <br> reviews</h6>
+                    <h4>Positive <br> reviews</h4>
                 </div>
                 <div class="counterModern">
                     <h2 class="num" data-val="47">000</h2>
                     <div class="counterBefore"></div>
-                    <h6>Partners throughout <br> the USA</h6>
+                    <h4>Partners throughout <br> the USA</h4>
                 </div>
             </div>
         </section>
@@ -289,7 +290,6 @@
                                     class="fa-solid fa-circle"></i></button>
                         </div>
                     </div>
-
                     <div class="diver_accordion">
                         <h3>Why Choose Divers</h3>
                         <div class="accordion-item">
@@ -355,62 +355,147 @@
             </div>
         </section>
 
+        <section id="testimonial">
+            <div class="container">
+                <h3>Testimonials</h3>
+                <div class="client-body">
+                    <p class="client-content">I had a fantastic weekend at Stoney Cove with your team. Great
+                        people who made my wife (Lisa) and I feel very welcome. Thanks for all your help and support
+                        with the diving!</p>
+                </div>
+                <div class="client-button">
+                    <div id="client-figure1" onclick="firstContent()">
+                        <div class="image">
+                            <div class="overlayClient1"></div>
+                            <img src="./assets/img/user-7-87x87.jpg" alt="">
+                        </div>
+                        <p>PATRICK GOODMAN</p>
+                        <h4><i>Client</i></h4>
+                    </div>
+                    <div id="client-figure2" onclick="secondContent()">
+                        <div class="image">
+                            <div class="overlayClient2"></div>
+                            <img src="./assets/img/user-8-87x87.jpg" alt="">
+                        </div>
+                        <p>KATE SMITH</p>
+                        <h4><i>Client</i></h4>
+                    </div>
+                    <div id="client-figure3" onclick="thirdContent()">
+                        <div class="image">
+                            <div class="overlayClient3"></div>
+                            <img src="./assets/img/user-9-87x87.jpg" alt="">
+                        </div>
+                        <p>SAM WILSON</p>
+                        <h4><i>Client</i></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section id="gallery">
             <div class="container">
                 <h3>Gallery</h3>
-                <div class="isotope-wrap">
-                    <div class="isotope">
-                        <div class="isotope-item" data-index="1" style="position: absolute; left: 0px; top: 0px;">
-                            <div class="overlay"><span class="moveText">Barracuda Point</span><a class="searchImg"
-                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-1-270x250.jpg" alt="">
-                        </div>
-                        <div class="isotope-item" data-index="2" style="position: absolute; left: 300px; top: 0px;">
-                            <div class="overlay"><span class="moveText">Blue Corner Wall</span><a class="searchImg"
-                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-2-270x530.jpg" alt="">
-                        </div>
-                        <div class="isotope-item" data-index="3" style="position: absolute; left: 600px; top: 0px;">
-                            <div class="overlay"><span class="moveText">The Yongola</span><a class="searchImg"
-                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-3-270x250.jpg" alt="">
-                        </div>
-                        <div class="isotope-item" data-index="4" style="position: absolute; left: 900px; top: 0px;">
-                            <div class="overlay"><span class="moveText">Thistlegon</span><a class="searchImg"
-                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-4-270x250.jpg" alt="">
-                        </div>
-                        <div class="isotope-item" data-index="5" style="position: absolute; left: 0px; top: 280px;">
-                            <div class="overlay"><span class="moveText">Shark and Yolanda Reef</span><a
-                                    class="searchImg" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-5-270x250.jpg" alt="">
-                        </div>
-                        <div class="isotope-item" data-index="6" style="position: absolute; left: 600px; top: 280px;">
-                            <div class="overlay"><span class="moveText">Great Blue Holef</span><a class="searchImg"
-                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-6-570x530.jpg" alt="">
-                        </div>
-                        <div class="isotope-item" data-index="7" style="position: absolute; left: 0px; top: 560px;">
-                            <div class="overlay"><span class="moveText">Manta Ray Night Dive</span><a class="searchImg"
-                                    href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                            <img src="./assets/img/masonry-gallery-7-570x250.jpg" alt="">
-                        </div>
+                <div class="gallery-container">
+
+                    <div class="gallery-item" data-index="1">
+                        <div class="overlay"><span class="moveText">Barracuda Point</span><a class="searchImg"
+                                href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-1-270x250.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <div class="overlay"><span class="moveText">Blue Corner Wall</span><a class="searchImg"
+                                href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-2-270x530.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <div class="overlay"><span class="moveText">The Yongola</span><a class="searchImg" href="#"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-3-270x250.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <div class="overlay"><span class="moveText">Thistlegon</span><a class="searchImg" href="#"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-4-270x250.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-index="5">
+                        <div class="overlay"><span class="moveText">Shark and Yolanda Reef</span><a class="searchImg"
+                                href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-5-270x250.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-index="6">
+                        <div class="overlay"><span class="moveText">Great Blue Holef</span><a class="searchImg"
+                                href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-6-570x530.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-index="7">
+                        <div class="overlay"><span class="moveText">Manta Ray Night Dive</span><a class="searchImg"
+                                href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <img src="./assets/img/masonry-gallery-7-570x250.jpg" alt="">
                     </div>
                 </div>
+
             </div>
 
-            <!-- Modal  -->
-            <!-- Modal Structure -->
+
             <div id="imageModal" class="modal">
                 <span class="close">×</span>
-                <img  class="modal-content" id="modalImage">
+                <img class="modal-content" id="modalImage">
                 <div id="caption"></div>
             </div>
 
         </section>
 
+        
+
     </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="galleryFooter">
+                <h5>Gallery</h5>
+                <div class="footerImg">
+                    <a href="#"><img src="./assets/img/grid-gallery-1-93x93.jpg" alt=""></a>
+                    <a href="#"><img src="./assets/img/grid-gallery-2-93x93.jpg" alt=""></a>
+                    <a href="#"><img src="./assets/img/grid-gallery-3-93x93.jpg" alt=""></a>
+                    <a href="#"><img src="./assets/img/grid-gallery-4-93x93.jpg" alt=""></a>
+                    <a href="#"><img src="./assets/img/grid-gallery-5-93x93.jpg" alt=""></a>
+                    <a href="#"><img src="./assets/img/grid-gallery-6-93x93.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What We Offer</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Instructors</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="getInTouch">
+                <h5>Get In Touch</h5>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-location-dot yellow"></i>523 Sylvan Ave, 5th Floor <br> Mountain View, CA 94041 USA</a></li>
+                    <li><a href="#"><i class="fa-solid fa-phone yellow"></i>+1 (844) 123 456 78</a></li>
+                    <li><a href="#"><i class="fa-regular fa-envelope yellow"></i>info@demolink.org</a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f footIcon"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter footIcon"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram footIcon"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g footIcon"></i></a>
+                        <a href="#"><i class="fa-brands fa-skype footIcon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe">
+            <p>© 2024 Divers. All rights reserved. Privacy Policy.</p>
+        </div>
+
+    </footer>
 
 
     <script src="./script.js"></script>
