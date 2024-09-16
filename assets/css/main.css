@@ -988,3 +988,9 @@ header .container nav ul .page_parent:hover .page_child {
   position: fixed;
   z-index: 9999;
 }
+
+@media (max-width: 1200px) {
+  header {
+    width: 100%;
+  }
+}

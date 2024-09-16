@@ -289,7 +289,8 @@ header {
     }
 }
 
-#firstSection {
+#firstSection { 
+    width: 100%;   
     position: relative;
     overflow: hidden;
 
@@ -1186,4 +1187,11 @@ header {
     height: 100vh;
     position: fixed;
     z-index: 9999;
+}
+
+
+@media(max-width:1200px){
+    header{
+        width: 100%;
+    }
 }
