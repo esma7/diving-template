@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/structure": "off",
+    "detect-css-reflows/paint": "off",
+    "detect-css-reflows/composite": "off",
+    "axe/name-role-value": "off",
+    "axe/keyboard": "off",
+    "axe/text-alternatives": "off"
+  }
+}
