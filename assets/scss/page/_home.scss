@@ -50,7 +50,6 @@ header {
 
             }
 
-
             .search_lang {
                 display: flex;
                 align-items: center;
@@ -100,19 +99,13 @@ header {
             }
         }
 
-
         nav {
-            // position: sticky;
-            // top:0px;
             width: 100%;
             padding: 10px;
             border-top: 1px solid grey;
             border-bottom: 1px solid grey;
             z-index: 999999;
             transition: 1s;
-
-
-
 
             ul {
                 display: flex;
@@ -289,8 +282,7 @@ header {
     }
 }
 
-#firstSection { 
-    width: 100%;   
+#firstSection {
     position: relative;
     overflow: hidden;
 
@@ -431,9 +423,8 @@ header {
 
 #secondSection {
     width: 100%;
-    height: 500px;
     background-image: url("../../../assets/img/bg-index-1.jpg");
-    background-color: red;
+    background-color: lightblue;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -443,10 +434,8 @@ header {
         margin: 0 auto;
         padding-top: 60px;
         font-family: "Lato";
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-
+        display: flex;
+        justify-content: space-around;
 
         .equipment {
             width: 400px;
@@ -457,8 +446,7 @@ header {
 
             .item_equip {
                 border-bottom: 1px solid rgb(159, 156, 156);
-            }
-
+            }       
             .item_equip,
             .item_equip1 {
                 display: flex;
@@ -488,25 +476,18 @@ header {
                         font-size: 17px;
                     }
                 }
-
             }
 
             #movementright {
                 transform: translateX(-60px);
                 transition: 3s all ease;
             }
-
-
             #movementleft {
                 transform: translateX(40px);
                 transition: 3s all ease;
             }
-
         }
-
-
     }
-
 }
 
 #thirdsection {
@@ -810,7 +791,6 @@ header {
 }
 
 #gallery {
-
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -821,122 +801,405 @@ header {
             text-align: center;
             padding: 30px;
         }
-
         .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(4, 270px);
-            grid-template-rows: 250px 250px 250px;
-            grid-gap: 30px;
+            display: flex;   
+            justify-content: space-around; 
+            flex-wrap: wrap;        
+            max-width: 1200px; 
+            gap:30px;          
+            // background-color: lightblue;
+            
+          
+            .gallery-left{                              
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 28px;
 
-            .gallery-item:nth-child(1), .gallery-item:nth-child(3), .gallery-item:nth-child(4), .gallery-item:nth-child(5) {
-                grid-column: span 1;
-            }
-
-            .gallery-item:nth-child(2) {
-                grid-column: span 1;
-                grid-row: span 2;
-            }
-
-            .gallery-item:nth-child(6) {
-                grid-column: span 2;
-                grid-row: span 2;
-            }
-
-            .gallery-item:nth-child(7) {
-                grid-column: span 2;
-            }
-
-            .gallery-item {
-                position: relative;
-
-                &:hover .overlay {
-                    visibility: visible;
-                    opacity: 0.9;
-                    transform: scale(1);
-                }
-
-                .moveText {                   
-                    font-weight: 400;
-                    margin-bottom: 10px;
-                }
-
-                .overlay {
-                    width: 100%;
-                    height: 100%;
-                    box-sizing: border-box;
-                    background-color: #fff;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    z-index: 22;
-                    visibility: hidden;
-                    opacity: 0;
-                    transform: scale(0.5);
-                    transition: 0.5s all ease;
-                    font-family: "Comfortaa";
-                    font-weight: 800;
+                .gallery-left-up{
+                    width: 100%;                   
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
+                    justify-content: space-between;
 
-                    .searchImg {
-                        width: 40px;
-                        min-height: 40px;
-                        padding: 10px;
-                        background-color: #0473DB;
-                        border-radius: 50%;
-                        color: #fff;
-                        margin-right: 10px;
-                    }
-
-                    .animate2 {
-                        animation: anima2 1s
-                    }
-
-                    @keyframes anima2 {
-                        0% {
-                            transform: translateX(-30px)
+                    .gallery-item {
+                        position: relative;
+        
+                        &:hover .overlay {
+                            visibility: visible;
+                            opacity: 0.9;
+                            transform: scale(1);
                         }
-
-                        100% {
-                            transform: translateX(0px)
+        
+                        .moveText {
+                            font-weight: 400;
+                            margin-bottom: 10px;
                         }
-
+        
+                        .overlay {
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 22;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: scale(0.5);
+                            transition: 0.5s all ease;
+                            font-family: "Comfortaa";
+                            font-weight: 800;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+        
+                            .searchImg {
+                                width: 40px;
+                                min-height: 40px;
+                                padding: 10px;
+                                background-color: #0473DB;
+                                border-radius: 50%;
+                                color: #fff;
+                                margin-right: 10px;
+                            }
+        
+                            .animate2 {
+                                animation: anima2 1s
+                            }
+        
+                            @keyframes anima2 {
+                                0% {
+                                    transform: translateX(-30px)
+                                }
+        
+                                100% {
+                                    transform: translateX(0px)
+                                }
+        
+                            }
+        
+                            span {
+                                font-family: "Comfortaa";
+                                font-size: 24px;
+                                padding: 10px;
+        
+                                &:hover {
+                                    color: #0473DB;
+                                }
+                            }
+        
+                            .animate {
+        
+                                animation: movetext 1s;
+                            }
+        
+                            @keyframes movetext {
+                                0% {
+                                    transform: translateY(-30px);
+                                }
+        
+                                100% {
+                                    transform: translateY(0px);
+                                }
+                            }
+        
+                        }
                     }
 
-                    span {
-                        font-family: "Comfortaa";
-                        font-size: 24px;
-                        padding: 10px;
-
-                        &:hover {
-                            color: #0473DB;
-                        }
+                    .gallery-left-left{
+                        display: flex;
+                        flex-direction: column;
+                        gap:30px
                     }
-
-                    .animate {
-
-                        animation: movetext 1s;
-                    }
-
-                    @keyframes movetext {
-                        0% {
-                            transform: translateY(-30px);
-                        }
-
-                        100% {
-                            transform: translateY(0px);
-                        }
-                    }
-
                 }
+                .gallery-left-below{                   
+                    .gallery-item {
+                        position: relative;
+        
+                        &:hover .overlay {
+                            visibility: visible;
+                            opacity: 0.9;
+                            transform: scale(1);
+                        }
+        
+                        .moveText {
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                        }
+        
+                        .overlay {
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 22;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: scale(0.5);
+                            transition: 0.5s all ease;
+                            font-family: "Comfortaa";
+                            font-weight: 800;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+        
+                            .searchImg {
+                                width: 40px;
+                                min-height: 40px;
+                                padding: 10px;
+                                background-color: #0473DB;
+                                border-radius: 50%;
+                                color: #fff;
+                                margin-right: 10px;
+                            }
+        
+                            .animate2 {
+                                animation: anima2 1s
+                            }
+        
+                            @keyframes anima2 {
+                                0% {
+                                    transform: translateX(-30px)
+                                }
+        
+                                100% {
+                                    transform: translateX(0px)
+                                }
+        
+                            }
+        
+                            span {
+                                font-family: "Comfortaa";
+                                font-size: 24px;
+                                padding: 10px;
+        
+                                &:hover {
+                                    color: #0473DB;
+                                }
+                            }
+        
+                            .animate {
+        
+                                animation: movetext 1s;
+                            }
+        
+                            @keyframes movetext {
+                                0% {
+                                    transform: translateY(-30px);
+                                }
+        
+                                100% {
+                                    transform: translateY(0px);
+                                }
+                            }
+        
+                        }
+                    }
+               
+                }
+            }
+
+            .gallery-right{              
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+                
+                .gallery-right-up{
+                    display: flex;
+                    justify-content: space-between;
+                    .gallery-item {
+                        position: relative;
+        
+                        &:hover .overlay {
+                            visibility: visible;
+                            opacity: 0.9;
+                            transform: scale(1);
+                        }
+        
+                        .moveText {
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                        }
+        
+                        .overlay {
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 22;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: scale(0.5);
+                            transition: 0.5s all ease;
+                            font-family: "Comfortaa";
+                            font-weight: 800;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+        
+                            .searchImg {
+                                width: 40px;
+                                min-height: 40px;
+                                padding: 10px;
+                                background-color: #0473DB;
+                                border-radius: 50%;
+                                color: #fff;
+                                margin-right: 10px;
+                            }
+        
+                            .animate2 {
+                                animation: anima2 1s
+                            }
+        
+                            @keyframes anima2 {
+                                0% {
+                                    transform: translateX(-30px)
+                                }
+        
+                                100% {
+                                    transform: translateX(0px)
+                                }
+        
+                            }
+        
+                            span {
+                                font-family: "Comfortaa";
+                                font-size: 24px;
+                                padding: 10px;
+        
+                                &:hover {
+                                    color: #0473DB;
+                                }
+                            }
+        
+                            .animate {
+        
+                                animation: movetext 1s;
+                            }
+        
+                            @keyframes movetext {
+                                0% {
+                                    transform: translateY(-30px);
+                                }
+        
+                                100% {
+                                    transform: translateY(0px);
+                                }
+                            }
+        
+                        }
+                    }
+                    
+                }
+                .gallery-right-below{
+                    .gallery-item {
+                        position: relative;
+        
+                        &:hover .overlay {
+                            visibility: visible;
+                            opacity: 0.9;
+                            transform: scale(1);
+                        }
+        
+                        .moveText {
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                        }
+        
+                        .overlay {
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 22;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: scale(0.5);
+                            transition: 0.5s all ease;
+                            font-family: "Comfortaa";
+                            font-weight: 800;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+        
+                            .searchImg {
+                                width: 40px;
+                                min-height: 40px;
+                                padding: 10px;
+                                background-color: #0473DB;
+                                border-radius: 50%;
+                                color: #fff;
+                                margin-right: 10px;
+                            }
+        
+                            .animate2 {
+                                animation: anima2 1s
+                            }
+        
+                            @keyframes anima2 {
+                                0% {
+                                    transform: translateX(-30px)
+                                }
+        
+                                100% {
+                                    transform: translateX(0px)
+                                }
+        
+                            }
+        
+                            span {
+                                font-family: "Comfortaa";
+                                font-size: 24px;
+                                padding: 10px;
+        
+                                &:hover {
+                                    color: #0473DB;
+                                }
+                            }
+        
+                            .animate {
+        
+                                animation: movetext 1s;
+                            }
+        
+                            @keyframes movetext {
+                                0% {
+                                    transform: translateY(-30px);
+                                }
+        
+                                100% {
+                                    transform: translateY(0px);
+                                }
+                            }
+        
+                        }
+                    }
+                }
+            }        
+
+              
             }
 
         }
     }
-}
 
 #footer {
 
@@ -953,9 +1216,7 @@ header {
         justify-content: space-between;
 
         .galleryFooter, .quick-links, .getInTouch {  
-
-            font-family: "Comfortaa";            
-
+            font-family: "Comfortaa";          
             h5 {
                 font-size: 22px;
                 color: #fff;
@@ -999,9 +1260,7 @@ header {
                 }
             }
         }
-
-        .quick-links {      
-
+        .quick-links {  
             ul {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -1043,27 +1302,21 @@ header {
 
         .getInTouch {           
               ul {
-
                 li {
                     font-family: "Lato";
                     font-size: 17px;
                     margin: 15px 0;
-
                     a {
                         color: #fff;
-
 
                         &:hover {
                             color: #0473DB
                         }
-
                         .yellow{
                             margin-right:10px;
                             color:#FAEA49;
-                            width: 30px;
-                           
+                            width: 30px;                           
                         }
-
                         .footIcon {
                             width: 40px;
                             height: 40px;
@@ -1080,9 +1333,6 @@ header {
                     }
                 }
             }
-
-
-
         }
 
     }
@@ -1187,11 +1437,4 @@ header {
     height: 100vh;
     position: fixed;
     z-index: 9999;
-}
-
-
-@media(max-width:1200px){
-    header{
-        width: 100%;
-    }
 }
