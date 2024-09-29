@@ -17,11 +17,12 @@ html {
 header {
   position: absolute;
   width: 100%;
+  top: 0;
   z-index: 3333;
 }
 header .container {
   background-color: transparent;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -93,9 +94,15 @@ header .container nav {
   z-index: 999999;
   transition: 1s;
 }
+header .container nav #menu {
+  color: #fff;
+  display: none;
+  font-size: 20px;
+}
 header .container nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Lato";
   font-weight: bold;
 }
@@ -124,8 +131,7 @@ header .container nav ul li .page_child {
   background-color: #fff;
   font-family: "Lato";
   font-weight: 400;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   transition: 0.7s all ease;
   transform: translateY(30px) scale(0.7);
 }
@@ -140,7 +146,7 @@ header .container nav ul li .page_child li a:hover {
   color: blue;
 }
 header .container nav ul li .element_child {
-  width: 675px;
+  width: 660px;
   min-height: 350px;
   position: absolute;
   display: flex;
@@ -149,8 +155,7 @@ header .container nav ul li .element_child {
   margin-left: -30px;
   padding: 30px;
   background-color: #fff;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   transition: 0.7s all ease;
   transform: translateY(30px) scale(0.7);
 }
@@ -225,8 +230,8 @@ header .container nav ul .element_parent {
   padding: 20px 0;
 }
 header .container nav ul .element_parent:hover .element_child {
-  visibility: visible;
-  opacity: 1;
+  display: block;
+  display: flex;
   transform: translateY(40px) scale(1);
 }
 header .container nav ul .page_parent {
@@ -234,8 +239,7 @@ header .container nav ul .page_parent {
   padding: 20px 0;
 }
 header .container nav ul .page_parent:hover .page_child {
-  visibility: visible;
-  opacity: 1;
+  display: block;
   transform: translateY(40px) scale(1);
 }
 
@@ -298,7 +302,7 @@ header .container nav ul .page_parent:hover .page_child {
 #firstSection #slider {
   display: flex;
   position: relative;
-  left: 0;
+  transform: translateX(0px);
   transition: 0.5s all ease;
 }
 #firstSection #slider .slide {
@@ -306,7 +310,7 @@ header .container nav ul .page_parent:hover .page_child {
   position: relative;
 }
 #firstSection #slider .slide img {
-  width: 1520px;
+  max-width: 1520px;
   height: 700px;
 }
 #firstSection #slider .slide .info {
@@ -443,7 +447,7 @@ header .container nav ul .page_parent:hover .page_child {
 }
 #thirdsection .container .counterModern {
   position: relative;
-  width: 270px;
+  width: 240px;
   height: 164px;
   color: #fff;
   text-align: center;
@@ -454,7 +458,7 @@ header .container nav ul .page_parent:hover .page_child {
 }
 #thirdsection .container .counterModern .counterBefore {
   position: relative;
-  width: 270px;
+  width: 100%;
   height: 10%;
   display: flex;
   justify-content: center;
@@ -1028,35 +1032,49 @@ header .container nav ul .page_parent:hover .page_child {
   align-items: center;
   justify-content: space-between;
 }
-#footer .container .galleryFooter, #footer .container .quick-links, #footer .container .getInTouch {
+#footer .container .galleryFooter,
+#footer .container .quick-links,
+#footer .container .getInTouch {
   font-family: "Comfortaa";
 }
-#footer .container .galleryFooter h5, #footer .container .quick-links h5, #footer .container .getInTouch h5 {
+#footer .container .galleryFooter h5,
+#footer .container .quick-links h5,
+#footer .container .getInTouch h5 {
   font-size: 22px;
   color: #fff;
   margin-bottom: 10px;
 }
-#footer .container .galleryFooter .footerImg, #footer .container .quick-links .footerImg, #footer .container .getInTouch .footerImg {
+#footer .container .galleryFooter .footerImg,
+#footer .container .quick-links .footerImg,
+#footer .container .getInTouch .footerImg {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
 }
-#footer .container .galleryFooter .footerImg a, #footer .container .quick-links .footerImg a, #footer .container .getInTouch .footerImg a {
+#footer .container .galleryFooter .footerImg a,
+#footer .container .quick-links .footerImg a,
+#footer .container .getInTouch .footerImg a {
   width: 96px;
   height: 96px;
   position: relative;
   overflow: hidden;
 }
-#footer .container .galleryFooter .footerImg a img, #footer .container .quick-links .footerImg a img, #footer .container .getInTouch .footerImg a img {
+#footer .container .galleryFooter .footerImg a img,
+#footer .container .quick-links .footerImg a img,
+#footer .container .getInTouch .footerImg a img {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-#footer .container .galleryFooter .footerImg a:hover:before, #footer .container .quick-links .footerImg a:hover:before, #footer .container .getInTouch .footerImg a:hover:before {
+#footer .container .galleryFooter .footerImg a:hover:before,
+#footer .container .quick-links .footerImg a:hover:before,
+#footer .container .getInTouch .footerImg a:hover:before {
   transform: scale(2) rotate(45deg) translate3d(0, -100%, 0);
 }
-#footer .container .galleryFooter .footerImg a::before, #footer .container .quick-links .footerImg a::before, #footer .container .getInTouch .footerImg a::before {
+#footer .container .galleryFooter .footerImg a::before,
+#footer .container .quick-links .footerImg a::before,
+#footer .container .getInTouch .footerImg a::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1213,4 +1231,156 @@ header .container nav ul .page_parent:hover .page_child {
   height: 100vh;
   position: fixed;
   z-index: 9999;
+}
+
+@media (max-width: 1200px) {
+  #fourthsection .container .divers .diver_slider .image {
+    width: 430px;
+  }
+}
+@media (max-width: 992px) {
+  header .container nav {
+    border: none;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+  }
+  header .container nav i {
+    cursor: pointer;
+  }
+  header .container nav ul {
+    display: none;
+  }
+  header .container nav ul li {
+    margin: 0px;
+  }
+  header .container nav ul .page_parent {
+    position: relative;
+  }
+  header .container nav ul .page_parent .page_child {
+    position: absolute;
+    top: -60px;
+    left: 200px;
+    background-color: #fff;
+    z-index: 33333;
+  }
+  header .container nav ul .element_parent {
+    padding-right: 20px;
+  }
+  header .container nav ul .showelement {
+    position: relative;
+  }
+  header .container nav ul .showelement .elementChild {
+    width: 500px;
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 120px;
+    transform: translateY(0px) scale(1);
+  }
+  header .container nav ul .showelement .elementChild .additional ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  header .container nav #menu {
+    display: block;
+  }
+  header .container .showMenu {
+    display: block;
+    width: 200px;
+    height: auto;
+    background: #fff;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+  }
+  header .container .showMenu li {
+    margin-left: 10px;
+  }
+  header .container .showMenu li a {
+    color: #000;
+    cursor: pointer;
+  }
+  #thirdSection .container {
+    flex-wrap: wrap;
+  }
+  #thirdSection .container .counterModern {
+    width: 206px;
+  }
+  #thirdSection .container .counterModern h2 {
+    font-size: 20px;
+  }
+  #fourthsection .container .divers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #fourthsection .container .divers .diver_slider .image {
+    width: 400px;
+  }
+  #fourthsection .container .diversLocation .unit {
+    width: 220px;
+    padding: 10px;
+  }
+  #fourthsection .container .diversLocation .unit img {
+    width: 40px;
+    height: 40px;
+  }
+  #fourthsection .container .diversLocation .unit h5 {
+    font-size: 18px;
+  }
+  #footer .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  #footer .container .getInTouch,
+  #footer .container .galleryFooter,
+  #footer .container .quick-links {
+    width: 45%;
+  }
+  #footer .container .getInTouch i,
+  #footer .container .galleryFooter i,
+  #footer .container .quick-links i {
+    margin: 6px;
+  }
+}
+@media (max-width: 768px) {
+  header .container nav ul .element_child {
+    width: 400px !important;
+    flex-wrap: wrap;
+  }
+  header .container nav ul .element_child .additional ul {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+  }
+  #secondSection {
+    background-image: none;
+  }
+  #secondSection .container {
+    flex-wrap: wrap;
+  }
+  #thirdsection .container {
+    flex-direction: column;
+  }
+  footer .container .getInTouch i,
+  footer .container .galleryFooter i,
+  footer .container .quick-links i {
+    margin: 0px !important;
+  }
+}
+@media (max-width: 600px) {
+  header .container nav ul .element_child {
+    width: 320px !important;
+  }
+  .gallery .container {
+    gap: 10px !important;
+  }
+  .gallery .container .gallery-container .gallery-left .gallery-left-up {
+    gap: 10px !important;
+  }
 }

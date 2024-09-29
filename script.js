@@ -1,56 +1,39 @@
-let counter = -100;
+
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 const slider = document.getElementById("slider");
 const slide = document.getElementsByClassName("slide");
 
-function setFunc() {
-  const arrayFaiz = [];
 
-  let newCounter = counter;
-  for (let i = 0; i < slide.length; i++) {
-    arrayFaiz.push(newCounter);
-    newCounter += 100;
-    if (newCounter >= slide.length * 100) {
-      newCounter = -100;
-    }
-  }
+let index = 0;
 
-  for (let i = 0; i < slide.length; i++) {
-    slide[i].style.left = arrayFaiz[i] + "%";
-  }
+next.addEventListener("click", nextFunc);
 
-  counter = (counter + 100) % (slide.length * 100);
-  if (counter === 0) {
-    counter = -100;
+function nextFunc() {
+  if (index < slide.length - 1) {
+    index++;
+  } else {
+    index = 0;
   }
+  slider.style.transform = `translateX(-${index * 100}%)`;
 }
-
-next.addEventListener("click", setFunc);
-
 
 
 prev.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+  } else {
+    index = slide.length - 1
+  }
+  slider.style.transform = `translateX(-${index * 100}%)`;
+})
 
-  slide[0].style.left = "-100%";
-  slide[1].style.left = "0%";
-});
+document.getElementById("menu").addEventListener("click", () => {
 
-let translateXValue = 0;
+  let menu = document.querySelector('.header_bottom')
+  menu.classList.toggle("showMenu")
+})
 
-next.addEventListener("click", () => transFunc());
-prev.addEventListener("click", () => transFunc());
-
-function transFunc() {
-  translateXValue += 20;
-  const infoElements = document.querySelectorAll(".info");
-  infoElements.forEach(item => {
-    item.style.transform = `translateX(${translateXValue}px)`;
-    item.style.opacity = "1";
-  });
-
-  console.log(infoElements);
-}
 
 window.addEventListener("scroll", () => {
   let navi = document.querySelector("nav");
@@ -59,7 +42,7 @@ window.addEventListener("scroll", () => {
     navi.classList.add("headerAnime");
     navi.style.position = "fixed";
     navi.style.top = "0";
-    navi.style.width = "1519px";
+    navi.style.width = "100%";
     for (let i = 0; i < liColor.length; i++) {
       liColor[i].style.color = "#2e2c2c";
     }
