@@ -1228,9 +1228,9 @@ header {
             }
 
             .footerImg {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
+                width: 340px;
+                display: flex; 
+                flex-wrap: wrap;               
                 grid-gap: 10px;
 
                 a {
@@ -1609,7 +1609,6 @@ header {
                 .diver_slider {
                     width: 45%;
                     .image {
-
                         width: 345px
                     }
                 }
@@ -1686,7 +1685,6 @@ header {
                         flex-wrap: wrap;
 
                         .additional {
-
                             ul {
                                 width: 400px;
                                 display: flex;

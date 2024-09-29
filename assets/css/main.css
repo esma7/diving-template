@@ -1049,9 +1049,9 @@ header .container nav ul .page_parent:hover .page_child {
 #footer .container .galleryFooter .footerImg,
 #footer .container .quick-links .footerImg,
 #footer .container .getInTouch .footerImg {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  width: 340px;
+  display: flex;
+  flex-wrap: wrap;
   grid-gap: 10px;
 }
 #footer .container .galleryFooter .footerImg a,
