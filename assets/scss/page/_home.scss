@@ -356,6 +356,7 @@ header {
                 max-width: 1520px;
                 height: 700px;
             }
+
             .info {
                 position: absolute;
                 top: 30%;
@@ -657,8 +658,8 @@ header {
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin: 30px;
+            justify-content: center;
+
 
             .unit {
                 width: 347px;
@@ -667,6 +668,10 @@ header {
                 align-items: center;
                 justify-content: center;
                 border: 1px solid rgb(177, 174, 174);
+
+                &:nth-child(2) {
+                    margin: 0 10px;
+                }
 
                 .unit-body {
                     font-family: "Comfortaa";
@@ -1443,19 +1448,38 @@ header {
     z-index: 9999;
 }
 
-@media(max-width:1200px){
-    #fourthsection{
-        .container{
-            .divers{
-                .diver_slider{
-                    .image{
+@media(max-width:1200px) {
+    #fourthsection {
+        .container {
+            .divers {
+                .diver_slider {
+                    .image {
                         width: 430px;
+                    }
+                }
+            }
+
+            .diversLocation {
+                justify-content: center;
+
+                .unit {
+                    width: 300px;
+                    padding: 10px;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    h5 {
+                        font-size: 18px;
                     }
                 }
             }
         }
     }
 }
+
 @media(max-width:992px) {
     header {
         .container {
@@ -1464,7 +1488,8 @@ header {
                 flex-direction: column;
                 align-items: start;
                 position: relative;
-                i{
+
+                i {
                     cursor: pointer;
                 }
 
@@ -1488,12 +1513,12 @@ header {
                     }
 
                     .element_parent {
-                       padding-right:  20px
+                        padding-right: 20px
                     }
 
                     .showelement {
                         position: relative;
-                       
+
 
                         .elementChild {
                             width: 500px;
@@ -1504,7 +1529,6 @@ header {
                             transform: translateY(0px) scale(1);
 
                             .additional {
-
                                 ul {
                                     display: flex;
                                     flex-direction: column;
@@ -1515,9 +1539,13 @@ header {
                         }
                     }
                 }
-
                 #menu {
-                    display: block;
+                    display: inline-block;                 
+                    color:#fff;
+                    i{
+                        padding: 10px 0;
+                        
+                    }
                 }
             }
 
@@ -1529,8 +1557,19 @@ header {
                 position: absolute;
                 left: 10px;
                 top: 30px;
-               
-            
+                animation: headerAnimation 1s alternate;               
+                transition: 1.5s all ease;
+
+                @keyframes headerAnimation{
+                    from{
+                        transform: translateX(-200px);                        
+                        opacity: 0;
+                    }
+                    to{
+                        transform: translateX(0px);                                            
+                        opacity: 1;
+                    }
+                }               
 
                 li {
                     margin-left: 10px;
@@ -1558,32 +1597,58 @@ header {
             }
         }
     }
-    #fourthsection{
-        .container{
-            .divers{
+
+    #fourthsection {
+        .container {
+            .divers {
                 display: flex;
+                justify-content: center;
                 flex-wrap: wrap;
+                gap: 4rem;
+
                 .diver_slider {
-                    .image{                       
-                          
-                    width: 400px
-                       
+                    width: 45%;
+                    .image {
+
+                        width: 345px
                     }
                 }
-                .diver_accordion{
 
+                .diver_accordion {
+                    width: 360px;
+
+                    h3 {
+                        font-size: 23px;
+                    }
+
+                    .accordion-item {
+                        width: 350px;
+
+                        .accordion-button {
+
+                            a {
+                                font-size: 14.5px !important;
+                            }
+                        }
+                    }
                 }
-                
+
             }
-            .diversLocation{
-                .unit{
-                    width: 220px;
-                    padding:10px;
-                    img{
+
+            .diversLocation {
+                display: flex;
+                justify-content: center !important;
+
+                .unit {
+                    width: 250px;
+                    padding: 10px;
+
+                    img {
                         width: 40px;
                         height: 40px;
                     }
-                    h5{
+
+                    h5 {
                         font-size: 18px;
                     }
                 }
@@ -1643,18 +1708,88 @@ header {
             flex-wrap: wrap;
         }
     }
-    #thirdsection{
-        .container{
+
+    #thirdsection {
+        .container {
             flex-direction: column;
         }
     }
 
-    footer {
+    #fourthsection {
+        .container {           
+            .divers {                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .diver_slider {
+                    width: 50%;
+                }
+
+                .diver_accordion {
+                    width: 360px;
+
+                    h3 {
+                        font-size: 23px;
+                        text-align: center;
+                    }
+
+                    .accordion-item {
+                        // width: 360px;
+
+                        .accordion-button {
+
+                            a {
+                                font-size: 18px !important;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .diversLocation {
+                display: flex;
+                justify-content: center !important;
+
+                .unit {
+                    width: 250px;
+                    padding: 10px;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    h5 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    #testimonial{
         .container{
+            .client-body{
+                
+                    height: auto;
+                    width: 600px !important;
+              
+            }
+            .client-button{
+                width: 50%;
+            }
+        }
+    }
+
+    footer {
+        .container {
+
             .getInTouch,
             .galleryFooter,
-            .quick-links {               
-    
+            .quick-links {
+
                 i {
                     margin: 0px !important;
                 }
@@ -1664,26 +1799,27 @@ header {
 
 }
 
-@media(max-width:600px){
-    header{
-        .container{
-            nav{
-               ul{
-                .element_child{
-                       width: 320px !important;
+@media(max-width:600px) {
+    header {
+        .container {
+            nav {
+                ul {
+                    .element_child {
+                        width: 320px !important;
                     }
                 }
             }
         }
     }
 
-    .gallery{
-        .container{
-            gap:10px !important;
-            .gallery-container{
-                .gallery-left{
-                    .gallery-left-up{
-                        gap:10px !important;
+    .gallery {
+        .container {
+            gap: 10px !important;
+
+            .gallery-container {
+                .gallery-left {
+                    .gallery-left-up {
+                        gap: 10px !important;
                     }
                 }
             }

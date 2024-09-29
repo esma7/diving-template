@@ -4,7 +4,6 @@ const prev = document.getElementById("prev");
 const slider = document.getElementById("slider");
 const slide = document.getElementsByClassName("slide");
 
-
 let index = 0;
 
 next.addEventListener("click", nextFunc);
@@ -17,7 +16,6 @@ function nextFunc() {
   }
   slider.style.transform = `translateX(-${index * 100}%)`;
 }
-
 
 prev.addEventListener("click", () => {
   if (index > 0) {
@@ -32,17 +30,19 @@ document.getElementById("menu").addEventListener("click", () => {
 
   let menu = document.querySelector('.header_bottom')
   menu.classList.toggle("showMenu")
+  
 })
-
 
 window.addEventListener("scroll", () => {
   let navi = document.querySelector("nav");
   let liColor = document.getElementsByClassName("color");
+  let menu = document.getElementById("menu");
   if (window.scrollY >= 100) {
     navi.classList.add("headerAnime");
     navi.style.position = "fixed";
     navi.style.top = "0";
     navi.style.width = "100%";
+    menu.style.color = "#000"
     for (let i = 0; i < liColor.length; i++) {
       liColor[i].style.color = "#2e2c2c";
     }
@@ -180,7 +180,6 @@ const clientButton3 = document.getElementById("client-figure3");
 
 function firstContent() {
   clientContent.innerHTML = `I had a fantastic weekend at Stoney Cove with your team. Great people who made my wife (Lisa) and I feel very welcome. Thanks for all your help and support with the diving!`;
-
   overlayClient1.style.opacity = "0";
 }
 

@@ -571,8 +571,7 @@ header .container nav ul .page_parent:hover .page_child {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 30px;
+  justify-content: center;
 }
 #fourthsection .container .diversLocation .unit {
   width: 347px;
@@ -581,6 +580,9 @@ header .container nav ul .page_parent:hover .page_child {
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(177, 174, 174);
+}
+#fourthsection .container .diversLocation .unit:nth-child(2) {
+  margin: 0 10px;
 }
 #fourthsection .container .diversLocation .unit .unit-body {
   font-family: "Comfortaa";
@@ -1237,6 +1239,20 @@ header .container nav ul .page_parent:hover .page_child {
   #fourthsection .container .divers .diver_slider .image {
     width: 430px;
   }
+  #fourthsection .container .diversLocation {
+    justify-content: center;
+  }
+  #fourthsection .container .diversLocation .unit {
+    width: 300px;
+    padding: 10px;
+  }
+  #fourthsection .container .diversLocation .unit img {
+    width: 40px;
+    height: 40px;
+  }
+  #fourthsection .container .diversLocation .unit h5 {
+    font-size: 18px;
+  }
 }
 @media (max-width: 992px) {
   header .container nav {
@@ -1284,7 +1300,11 @@ header .container nav ul .page_parent:hover .page_child {
     align-items: start;
   }
   header .container nav #menu {
-    display: block;
+    display: inline-block;
+    color: #fff;
+  }
+  header .container nav #menu i {
+    padding: 10px 0;
   }
   header .container .showMenu {
     display: block;
@@ -1294,6 +1314,18 @@ header .container nav ul .page_parent:hover .page_child {
     position: absolute;
     left: 10px;
     top: 30px;
+    animation: headerAnimation 1s alternate;
+    transition: 1.5s all ease;
+  }
+  @keyframes headerAnimation {
+    from {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
   }
   header .container .showMenu li {
     margin-left: 10px;
@@ -1313,13 +1345,34 @@ header .container nav ul .page_parent:hover .page_child {
   }
   #fourthsection .container .divers {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 4rem;
+  }
+  #fourthsection .container .divers .diver_slider {
+    width: 45%;
   }
   #fourthsection .container .divers .diver_slider .image {
-    width: 400px;
+    width: 345px;
+  }
+  #fourthsection .container .divers .diver_accordion {
+    width: 360px;
+  }
+  #fourthsection .container .divers .diver_accordion h3 {
+    font-size: 23px;
+  }
+  #fourthsection .container .divers .diver_accordion .accordion-item {
+    width: 350px;
+  }
+  #fourthsection .container .divers .diver_accordion .accordion-item .accordion-button a {
+    font-size: 14.5px !important;
+  }
+  #fourthsection .container .diversLocation {
+    display: flex;
+    justify-content: center !important;
   }
   #fourthsection .container .diversLocation .unit {
-    width: 220px;
+    width: 250px;
     padding: 10px;
   }
   #fourthsection .container .diversLocation .unit img {
@@ -1366,6 +1419,47 @@ header .container nav ul .page_parent:hover .page_child {
   }
   #thirdsection .container {
     flex-direction: column;
+  }
+  #fourthsection .container .divers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #fourthsection .container .divers .diver_slider {
+    width: 50%;
+  }
+  #fourthsection .container .divers .diver_accordion {
+    width: 360px;
+  }
+  #fourthsection .container .divers .diver_accordion h3 {
+    font-size: 23px;
+    text-align: center;
+  }
+  #fourthsection .container .divers .diver_accordion .accordion-item .accordion-button a {
+    font-size: 18px !important;
+  }
+  #fourthsection .container .diversLocation {
+    display: flex;
+    justify-content: center !important;
+  }
+  #fourthsection .container .diversLocation .unit {
+    width: 250px;
+    padding: 10px;
+  }
+  #fourthsection .container .diversLocation .unit img {
+    width: 40px;
+    height: 40px;
+  }
+  #fourthsection .container .diversLocation .unit h5 {
+    font-size: 18px;
+  }
+  #testimonial .container .client-body {
+    height: auto;
+    width: 600px !important;
+  }
+  #testimonial .container .client-button {
+    width: 50%;
   }
   footer .container .getInTouch i,
   footer .container .galleryFooter i,
